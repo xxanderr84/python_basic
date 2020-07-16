@@ -8,7 +8,7 @@ def my_func(x: float, y: int, **kwargs):
             result = result / x
             i = i - 1
         return result
-    return 'Не выбран спопоб расчета'
+    return 'Не выбран способ расчета'
 
 
 while True:
