@@ -1,11 +1,7 @@
 def user_info(name: str, last_name: str, year_birth: int, city: str, email: str, phone: str):
-    result = name
-    result = result + ' ' + last_name
-    result = result + ' ' + str(year_birth)
-    result = result + ' ' + city
-    result = result + ' ' + email
-    result = result + ' ' + phone
-    return result
+    tmp_list = [name, last_name, str(year_birth), city, email, phone]
+    tmp_str = ' '
+    return tmp_str.join(tmp_list)
 
 
 user_name = input('Введите имя: ')
