@@ -1,4 +1,11 @@
-def my_func(x: float, y: int, **kwargs):
+def my_func(x: float, y: int, **kwargs) -> float:
+    """
+    Функция возведения в степень
+    x: операнд
+    y: степень
+    kwargs: используется method="star" для расчета с помощью операции **
+    :return: число x в степени y
+    """
     if kwargs.__len__() > 0:
         if kwargs['method'] == 'star':
             return x ** y

@@ -1,4 +1,11 @@
 def my_func(val1: float, val2: float, val3: float) -> float:
+    """
+    Функция для сложения двух максимальных чисел из трех
+    val1:
+    val2:
+    val3:
+    :return: сумма двух чисел
+    """
     tmp_list = [val1, val2, val3]
     tmp_list.sort()
     return tmp_list[1] + tmp_list[2]

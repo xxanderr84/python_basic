@@ -1,4 +1,9 @@
 def int_func(user_string: str) -> str:
+    """
+    Функция делает первый символ строки прописным
+    user_string: строка
+    :return: строка с первой прописной буквой
+    """
     result_string = ''
     i = 0
     while i < user_string.__len__():
@@ -10,6 +15,11 @@ def int_func(user_string: str) -> str:
 
 
 def int_super_func(long_string: str) -> str:
+    """
+    Функция делает все первые буквы в словах прописными
+    long_string: строка
+    :return: строка с первыми прописными буквами
+    """
     tmp_list = long_string.split(' ')
     i = 0
     while i < tmp_list.__len__():
@@ -18,5 +28,5 @@ def int_super_func(long_string: str) -> str:
     return ' '.join(tmp_list)
 
 
-print(int_func('sdfsdfdsfsdfdsf'))
-print(int_super_func('dsfsdf fdsfsd fdsfds fdsfdsfsdfdsfsdfdsf fdsfwewer fq'))
+user_string = input('Введите строку: ')
+print(int_super_func(user_string))

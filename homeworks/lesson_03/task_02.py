@@ -1,4 +1,14 @@
 def user_info(name: str, last_name: str, year_birth: int, city: str, email: str, phone: str):
+    """
+    Функция для объединения всех данных пользователя
+    name: Имя
+    last_name: Фамилие
+    year_birth: Год рождения
+    city: Город
+    email: e-mail адрес
+    phone: телефон
+    :return: строка разделенная пробелами
+    """
     tmp_list = [name, last_name, str(year_birth), city, email, phone]
     tmp_str = ' '
     return tmp_str.join(tmp_list)

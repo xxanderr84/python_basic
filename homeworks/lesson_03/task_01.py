@@ -1,4 +1,10 @@
 def my_divide(val1: float, val2: float):
+    """
+    Функция для деления одного числа на другое
+    val1: делимое
+    val2: делитель
+    :return: частное двух чисел
+    """
     if val2:
         return val1 / val2
     return 'Делить на ноль нельзя'
