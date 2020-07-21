@@ -1,6 +1,6 @@
-my_list = [10, 20, 30, 40, 50]
-tmp_list = my_list.copy()
-tmp_list.pop(0)
-new_list = [itm for itm in tmp_list]
+from random import randint
+my_list = [randint(0, 200) for _ in range(0, randint(15, 20))]
+print(my_list)
+new_list = [my_list[i] for i in range(0, len(my_list)) if my_list[i] > my_list[i-1]]
 print(new_list)
 
