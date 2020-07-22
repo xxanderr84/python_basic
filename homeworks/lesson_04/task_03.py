@@ -5,5 +5,5 @@ def my_range(start: int, stop: int) -> None:
         i = i + 1
 
 
-print(f'{[itm for itm in range(20, 241) if not((itm % 20) and (itm % 21))]}')
+print(f'{[itm for itm in my_range(20, 241) if not((itm % 20) and (itm % 21))]}')
 
