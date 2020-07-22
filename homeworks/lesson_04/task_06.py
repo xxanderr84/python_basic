@@ -1,5 +1,4 @@
 from random import randint
-from itertools import count
 from itertools import cycle
 
 

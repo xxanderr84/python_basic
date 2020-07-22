@@ -14,5 +14,6 @@ while True:
         break
     except ValueError:
         print('Не верное число')
+
 for itm in fact(end_value):
     print(itm)
