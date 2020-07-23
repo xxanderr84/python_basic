@@ -2,10 +2,9 @@ def remove_duplicate(error_list):
     tmp_list = []
     duplicate_list = set()
     for itm in my_list:
-        try:
-            tmp_list.index(itm)
+        if itm in tmp_list:
             duplicate_list.add(itm)
-        except ValueError:
+        else:
             tmp_list.append(itm)
     return [itm for itm in error_list if not (itm in duplicate_list)]
 
