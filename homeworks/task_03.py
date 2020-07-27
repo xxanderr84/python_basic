@@ -6,7 +6,7 @@ with open('task_03.txt', 'r', encoding='UTF-8') as file:
         sur_tmp, sal_tmp = line.split(' ')
         surname.append(sur_tmp)
         try:
-            salary.append(int(sal_tmp))
+            salary.append(float(sal_tmp))
         except ValueError:
             print(f'Не верно введен оклад {sur_tmp}')
 i = 0
