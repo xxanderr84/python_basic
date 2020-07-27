@@ -1,5 +1,5 @@
 import random
-#создаем файл случайным набором чисел
+# создаем файл случайным набором чисел
 tmp_list = []
 i = 0
 while i < random.randint(15, 20):
@@ -10,7 +10,8 @@ tmp_list = [str(itm) for itm in tmp_list]
 with open('task_05.txt', 'w', encoding='UTF-8') as file:
     file.write(' '.join(tmp_list))
 
-#читаем файл и ищем сумму
+# читаем файл и ищем сумму
+
 with open('task_05.txt', 'r', encoding='UTF-8') as file:
     tmp_list = file.read().split(' ')
 try:
