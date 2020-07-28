@@ -1,7 +1,7 @@
 class Worker:
-    name: str
-    surname: str
-    position: str
+    name = ''
+    surname = ''
+    position = ''
     _income = {}
 
     def __init__(self, name: str, surname: str, position: str, wage: float, bonus: float):
@@ -16,7 +16,6 @@ class Worker:
 
 class Position(Worker):
     def __init__(self, name: str, surname: str, position: str, wage: float, bonus: float):
-
         super().__init__(name, surname, position, wage, bonus)
 
     def get_fullname(self):

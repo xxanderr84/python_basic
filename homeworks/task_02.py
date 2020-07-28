@@ -1,6 +1,6 @@
 class Road:
-    _length: float
-    _width: float
+    _length = 0.0
+    _width = 0.0
 
     def __init__(self, length: float, width: float):
         self._width = width
