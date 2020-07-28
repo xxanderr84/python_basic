@@ -15,9 +15,6 @@ class Worker:
 
 
 class Position(Worker):
-    def __init__(self, name: str, surname: str, position: str, wage: float, bonus: float):
-        super().__init__(name, surname, position, wage, bonus)
-
     def get_fullname(self):
         return f'{self.surname} {self.name}'
 
