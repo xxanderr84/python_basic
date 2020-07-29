@@ -25,10 +25,6 @@ class Car:
 
 
 class TownCar(Car):
-    def __init__(self, speed: float, color: str, name: str):
-        super().__init__(speed, color, name)
-        self.is_police = False
-
     def show_speed(self):
         if self.speed > 60:
             raise Exception('Скорость превышена')
@@ -36,9 +32,7 @@ class TownCar(Car):
 
 
 class SportCar(Car):
-    def __init__(self, speed: float, color: str, name: str):
-        super().__init__(speed, color, name)
-        self.is_police = False
+    pass
 
 
 class PoliceCar(Car):
@@ -48,13 +42,17 @@ class PoliceCar(Car):
 
 
 class WorkCar(Car):
-    def __init__(self, speed: float, color: str, name: str):
-        super().__init__(speed, color, name)
-        self.is_police = False
-
     def show_speed(self):
         if self.speed > 40:
             raise Exception('Скорость превышена')
         return self.speed
 
 
+sport_car = SportCar(10, 'red', 'Ferrari')
+town_car = TownCar(20, 'blue', 'Lada')
+work_car = WorkCar(30, 'black', 'Catafalk')
+police_car = PoliceCar(40, 'white', 'Ford')
+sport_car.speed = 100
+print(f'{sport_car.name}     {sport_car.color}')
+print(f'{work_car.go()}   {work_car.stop()}   {work_car.turn("лево")} ')
+print(f'{town_car.show_speed()}')
