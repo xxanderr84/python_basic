@@ -74,19 +74,26 @@ class Stock:
         self.__equipment.extend(equipments)
 
     def add_equipment(self, equipment: Equipment):
-        try:
-            if self.__equipment.index(equipment):
-                return False
-        except ValueError:
-            self.__equipment.append(equipment)
-            return True
+        if equipment in self.__equipment:
+            return False
+        self.__equipment.append(equipment)
+        return True
 
     def remove_equipment(self, equipment: Equipment):
-        self.__equipment.remove(equipment)
-        return True
+        if equipment in self.__equipment:
+            self.__equipment.remove(equipment)
+            return True
+        return False
 
     def get_equipment(self, inventory: str):
         for itm in self.__equipment:
             if itm.inventory == inventory:
                 return itm
-        raise Exception(f'{inventory} not in this stock {self.name}')
+        return None
+
+
+printer = Printer('My printer', 'HP', 'SF-1329', 50)
+stock = Stock('Home', [])
+stock.add_equipment(printer)
+stock.add_equipment(printer)
+print(1)
